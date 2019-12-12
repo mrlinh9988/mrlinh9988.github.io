@@ -15,7 +15,7 @@
 }
 
 .block1 .header{
-    height: 150px;
+    min-height: 150px;
     background: rgba(0, 0, 0, 0.5);
 }
 
