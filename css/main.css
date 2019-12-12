@@ -16,7 +16,7 @@
 
 .block1 .header{
     min-height: 150px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .block1 .content{
@@ -25,4 +25,8 @@
 
 .block1 .container {
     height: 100%;
+}
+
+.logo {
+    font-size: 35px;
 }
