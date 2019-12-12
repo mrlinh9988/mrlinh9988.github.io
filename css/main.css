@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-div {
+/* div {
     border: 1px solid black;
     height: 100px;
-}
+} */
 
 .block1 {
     height: 1000px;
@@ -20,5 +20,9 @@ div {
 }
 
 .block1 .content{
-    height: 650px;
+    height: 850px;
+}
+
+.block1 .container {
+    height: 100%;
 }
