@@ -71,3 +71,39 @@
 .block2 .header{
     min-height: 150px;
 }
+
+/* block2  */
+.content-block2 .products {
+
+}
+.products .product-item .product{
+    width: 260px;
+    height: 260px;
+    /* background-image: url('../imgs/op1.jpg'); */
+    background-size: cover;
+    position: relative;
+}
+.products .product-item:hover .filter{
+    width: 260px;
+    height: 260px;
+    background: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.6; */
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-item .filter:hover .plus {
+    display: block;
+}
+
+.plus {
+    position: absolute;
+    color: white;
+    display: none;
+    font-size: 40px;
+    color: rgb(223, 217, 217);
+}
