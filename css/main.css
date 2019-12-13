@@ -9,24 +9,50 @@
     height: 100px;
 } */
 
-.block1 {
-    height: 1000px;
+.block-header {
+   
     background: url('../imgs/photo.png');
 }
 
-.block1 .header{
+.block-header .header{
     min-height: 150px;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.block1 .content{
+.block-header .content{
     height: 850px;
 }
 
-.block1 .container {
+.block-header .container {
     height: 100%;
 }
 
 .logo {
     font-size: 35px;
+}
+
+.content {
+    font-size: 30px;
+}
+
+.content p {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.footer-01 {
+    background-color: #4bcaff;
+}
+
+.line-services {
+    height: 2px;
+    width: 50px;
+}
+
+.services-text p {
+    font-size: 30px;
+}
+
+.services-item {
+    width: 280px;
+    height: 200px;
 }
