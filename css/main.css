@@ -97,6 +97,7 @@
     opacity: 0;
     top: 0;
     cursor: pointer;
+    transition: 0.2s;
 }
 .products .product-item:hover .filter{
     opacity: 1;
@@ -169,6 +170,12 @@
     z-index: 0;
 }
 
+.block5 .icons i:hover {
+    transition: 0.2s;
+    color: #4bcaff;
+    border-color: #4bcaff !important;
+}
+
 /* block6  */
 .block6 {
     padding: 80px 0;
@@ -224,6 +231,14 @@
     background-color: #4bcaff;
 }
 
+.block7 input:hover{
+    border-color: #4bcaff !important;
+}
+
+.block7 textarea:hover {
+    border-color: #4bcaff !important;
+}
+
 /* block8 */
 .block8 {
     background-color: #353f47;
@@ -235,4 +250,19 @@
 
 .block8 .quote-logo {
     color: #515f67
+}
+
+.big-text {
+    cursor: pointer;
+    
+}
+
+.big-text:hover {
+    cursor: pointer;    
+}
+
+.btn-message:hover {
+    background-color: transparent !important;
+    transition: 0.2s;
+    color: #4bcaff !important;
 }
