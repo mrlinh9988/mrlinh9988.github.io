@@ -9,9 +9,12 @@
    
 } */
 
+
 .block-header {
-   
-    background: url('../imgs/photo.png');
+    background: url('../imgs/op1-606275.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .block-header .header{
@@ -187,9 +190,49 @@
 
 /* block7  */
 .block7 {
+    padding: 80px 0;
     background: url('../imgs/op-589333.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.block7 .block7-text {
+    font-size: 15px;
+}
+
+.background-transparent {
+    background: transparent;
+    border-color: white;
+}
+
+.block7 .info {
+    height: 80px;
+    font-size: 16px;
+}
+
+.block7 .message {
+    background: transparent;
+    border-color: white;
+    border-radius: 0;
+}
+
+.block7 .btn {
+    font-size: 15px;
+    width: 250px;
+    padding: 10px 0;
+    background-color: #4bcaff;
+}
+
+/* block8 */
+.block8 {
+    background-color: #353f47;
+}
+.breadcrumb {
+    background: transparent;
+    color: #515f67
+}
+
+.block8 .quote-logo {
+    color: #515f67
+}
