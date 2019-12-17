@@ -19,8 +19,11 @@
 }
 
 .block-header .header{
+    width: 100%;
     min-height: 150px;
     background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 5;
 }
 
 .block-header .content{
