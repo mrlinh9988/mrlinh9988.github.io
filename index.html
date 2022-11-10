@@ -1,487 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <header>
+        <link href='https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+        <style>
+            @-webkit-keyframes beat {
+                0% {-webkit-transform: scale(1)
+                    rotate(225deg); -webkit-box-shadow:0 0
+                    40px rgba(213,9,60,1);}
+                50% {-webkit-transform: scale(1.1)
+                    rotate(225deg); -webkit-box-shadow:0 0
+                    70px rgba(213,9,60,0.6);}
+                100% {-webkit-transform: scale(1)
+                    rotate(225deg); -webkit-box-shadow:0 0 
+                    40px rgba(213,9,60,1);}
+                }
 
-</head>
+                @-moz-keyframes beat {
+                0% {-moz-transform: scale(1)
+                    rotate(225deg); -moz-box-shadow:0 0
+                    40px rgba(213,9,60,1);}
+                50% {-moz-transform: scale(1.1)
+                    rotate(225deg); -moz-box-shadow:0 0
+                    70px rgba(213,9,60,0.6);}
+                100% {-moz-transform: scale(1)
+                    rotate(225deg); -moz-box-shadow:0 0 
+                    40px rgba(213,9,60,1);}
+                }
 
-<body>
-    <div class="block-header">
+                @keyframes beat {
+                0% {transform: scale(1)
+                    rotate(225deg); box-shadow:0 0
+                    40px rgba(213,9,60,1);}
+                50% {transform: scale(1.1)
+                    rotate(225deg); box-shadow:0 0
+                    70px rgba(213,9,60,0.6);}
+                100% {transform: scale(1)
+                    rotate(225deg); box-shadow:0 0 
+                    40px rgba(213,9,60,1);}
+                }
 
-        <div class="header d-flex align-items-center">
-            <div class="container">
-                <nav class="navbar h-100 navbar-expand-lg navbar-light">
-                    <a class="navbar-brand text-light" href="#">mrLinh</i></a>
-                    <button class="navbar-toggler border-light" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars text-light"></i>
-                    </button>
+                #background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background: #ffa5a5;
+                background: -moz-linear-gradient(top, #ffa5a5 0%, #ffd3d3 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa5a5), color-stop(100%,#ffd3d3));
+                background: -webkit-linear-gradient(top, #ffa5a5 0%,#ffd3d3 100%);
+                background: linear-gradient(top, #ffa5a5 0%, #ffd3d3 100%);
+                }
 
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
-                        <ul class="navbar-nav text-right">
-                            <li class="nav-item ">
-                                <a class="nav-link text-info mx-0 font-weight-bold" href="#">HOME <span
-                                        class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light mx-2" href="#">SERVICES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light mx-2" href="#">FEATURES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light mx-2" href="#">PORTFOLIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light mx-2" href="#">CONTACT</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
+                #chest {
+                position: relative;
+                width: 500px;
+                height: 450px;
+                margin: 0 auto;
+                }
 
-        <!-- /header  -->
-        <div class="content d-flex flex-column justify-content-center align-items-center">
-            <p class="text-light px-3">NGUYEN HAI LINH</p>
-            <p class="text-light px-3">BAC NINH</p class="bg-dark">
-        </div>
-        <!-- /content block-header  -->
-    </div>
-    <!-- /block-header -->
+                .heart {
+                position: absolute;
+                z-index: 2;
+                background: -moz-linear-gradient(-180deg, #f50a45 0%, #d5093c 40%);
+                background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%,#f50a45), color-stop(40%,#d5093c));
+                background: -webkit-linear-gradient(-180deg, #f50a45 0%,#d5093c 40%);
+                background: linear-gradient(-180deg, #f50a45 0%, #d5093c 40%);
+                -webkit-animation: beat 0.7s ease 0s infinite normal;
+                -moz-animation: beat 0.7s ease 0s infinite normal;
+                animation: beat 0.7s ease 0s infinite normal;
+                }
 
-    <div class="footer-01 ">
-        <div class="container">
-            <div class="content-footer">
+                .heart.center {
+                background: -moz-linear-gradient(-45deg, #b80734 0%, #d5093c 40%);
+                background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b80734), color-stop(40%,#d5093c));
+                background: -webkit-linear-gradient(-45deg, #b80734 0%,#d5093c 40%);
+                background: linear-gradient(-45deg,#b80734 0%,#d5093c 40%);
+                }
 
-                <div class="services-text mb-10">
-                    <p class="text-light mb-0 m-auto big-text">SERVICES</p>
-                    <div class="line-services bg-light "></div>
-                </div>
+                .heart.top {
+                z-index: 3;
+                }
 
-                <div class="row">
-                    <div class="services-item text-light col-md-3 text-justify">
-                        <img src="./imgs/coffee.png" alt="">
-                        <p class="name-item mt-3">COFFE</p>
-                        <p class="font-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet nam, sit
-                            eum repudiandae
-                            dolorum veniam ullam eligendi! Corrupti repellat neque maxime at dolor aspernatur quis
-                            voluptate veniam</p>
-                    </div>
-                    <div class="services-item text-light col-md-3 text-justify">
-                        <img src="./imgs/instant.png" alt="">
-                        <p class="name-item mt-3">ISTANT</p>
-                        <p class="font-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet nam, sit
-                            eum repudiandae
-                            dolorum veniam ullam eligendi! Corrupti repellat neque maxime at dolor aspernatur quis
-                            voluptate veniam</p>
-                    </div>
-                    <div class="services-item text-light col-md-3 text-justify">
-                        <img src="./imgs/dslr.png" alt="">
-                        <p class="name-item mt-3">SERIOUS</p>
-                        <p class="font-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet nam, sit
-                            eum repudiandae
-                            dolorum veniam ullam eligendi! Corrupti repellat neque maxime at dolor aspernatur quis
-                            voluptate veniam</p>
-                    </div>
-                    <div class="services-item text-light col-md-3 text-justify">
-                        <img src="./imgs/dslr.png" alt="">
-                        <p class="name-item mt-3">FRAME</p>
-                        <p class="font-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet nam, sit
-                            eum repudiandae
-                            dolorum veniam ullam eligendi! Corrupti repellat neque maxime at dolor aspernatur quis
-                            voluptate veniam</p>
-                    </div>
-                </div>
-                <!-- /services-items -->
-            </div>
-            <!-- /content-footer -->
-        </div>
-    </div>
-    <!-- /footer-01 -->
+                .side {
+                top: 50px;
+                width: 220px;
+                height: 220px;
+                -moz-border-radius: 220px;
+                -webkit-border-radius: 220px;
+                border-radius: 220px;
+                }
 
-    <div class="block2">
-        <div class="container">
-            <nav class="navbar h-100 navbar-expand-lg navbar-light px-0 py-5">
-                <div class="services-text ">
-                    <p class="text-dark mb-0 m-auto big-text">PORTFOLIO</p>
-                    <div class="line-services bg-dark mb-0"></div>
-                </div>
-                <button class="navbar-toggler border-dark" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="fas fa-bars text-dark"></i>
-                </button>
+                .center {
+                width: 210px;
+                height: 210px;
+                bottom: 100px;
+                left: 145px;
+                font-size: 0;
+                text-indent: -9999px;
+                }
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav text-right">
-                        <li class="nav-item ">
-                            <a class="nav-link text-info mx-0 font-weight-bold" href="#">HOME <span
-                                    class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-2 font-weight-bold" href="#">SERVICES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-2 font-weight-bold" href="#">FEATURES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-2 font-weight-bold" href="#">PORTFOLIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-2 font-weight-bold" href="#">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="content-block2">
-                <div class="products mb-4">
-                    <div class="row">
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op1.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
+                .left {
+                left: 62px;
+                }
 
-                            <div class="product-item">
-                                <img src="./imgs/op2.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op1.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op2.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    `
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op2.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op1.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op2.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="product-item">
-                                <img src="./imgs/op1.jpg" class="product position-relative" alt="">
-                                <div class="filter d-flex justify-content-center align-items-center position-absolute">
-                                    <span class="plus position-absolute"><i class="fas fa-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /content-block2 -->
-    </div>
-    <!-- /block2 -->
-    <div class="block3 bg-secondary">
-        <div class="block3-content">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-light">
-                        <div class="services-text mb-4">
-                            <p class="text-light mb-0 m-auto big-text">JUST DEFAULT SECTION</p>
-                            <div class="line-services bg-light mb-0"></div>
-                        </div>
-                        <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quaerat
-                            praesentium
-                            eveniet,
-                            aut, dolore dignissimos ut ipsam odit iure eum eius impedit quis recusandae, esse vero
-                            natus
-                            autem veniam pariatur!</p>
-                        <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quaerat
-                            praesentium
-                            eveniet,
-                            aut, dolore dignissimos ut ipsam odit iure eum eius impedit quis recusandae, esse vero
-                            natus
-                            autem veniam pariatur!</p>
+                .right {
+                right: 62px;
+                }
 
-                        <button class="btn btn-outline-dark mt-3">VISIT ME</button>
-                    </div>
-                    <div class="col-md-6 my-4 pl-4">
-                        <iframe src="https://www.youtube.com/embed/TIwH2yiCulw" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen width="535" height="320" style="margin-left: -10px;width:100%"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /block3 -->
-    <div class="block4">
-        <div class="container">
-            <div class="twitter d-flex justify-content-between align-items-center py-5">
-                <div class="services-text">
-                    <p class="text-light mb-0 m-auto big-text">TWITTER</p>
-                    <div class="line-services bg-light mb-0"></div>
-                </div>
-                <div class="twitter-logo">
-                    <i class="fab fa-twitter"></i>
-                </div>
-            </div>
+                p {
+                /*font-family: 'Love Ya Like A Sister';*/
+                font-family: 'Codystar';
+                font-size: 3.6em;
+                color: white;
+                text-shadow: 1px 1px 1px #000;
+                margin-top: 100px;
+                /*font-weight: bold;*/
+                letter-spacing: 1.8px;
+                }
 
-            <p class="description">Unerdwear cookie liquorice. Cake donut cupcake lollipop soufflé candy. Chocolate
-                oat cake <a href="" class="font-weight-bold text-light text-decoration-none">@cheesecake</a> tootsie
-                roll.</p>
-        </div>
-    </div>
-
-    <!-- /block4 -->
-    <div class="block5">
-        <!-- <div class="filter-block5"></div> -->
-        <div class="container text-light">
-            <div class="services-text mb-3">
-                <p class="text-light mb-0 m-auto big-text">WHO IS LINH</p>
-                <div class="line-services bg-light mb-0"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 ">
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi
-                        omnis? Ut, velit excepturi. Doloribus soluta eos distinctio obcaecati. Nostrum nobis nesciunt
-                        dolores vero repellendus deserunt maxime harum et rerum.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos id
-                        unde pariatur maxime
-                        fugiat culpa veniam nesciunt in explicabo laudantium quae voluptate ex corrupti, totam magni
-                        magnam qui repudiandae!
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cumque
-                        iusto saepe a et nam fuga debitis hic, asperiores numquam voluptates fugit illum! Omnis quis
-                        officiis saepe quas, id delectus.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div class="icons">
-                        <i class="fab fa-twitter border border-white p-2 rounded"></i>
-                        <i class="fab fa-google-plus-square border border-white p-2 rounded"></i>
-                        <i class="fas fa-baseball-ball border border-white p-2 rounded"></i>
-                        <i class="fas fa-trophy border border-white p-2 rounded"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /block5  -->
-    <div class="block6">
-        <div class="container">
-            <div class="twitter d-flex justify-content-between align-items-center py-5">
-                <div class="services-text">
-                    <p class="text-dark mb-0 m-auto big-text">TESTIMONIALS</p>
-                    <div class="line-services bg-dark mb-0"></div>
-                </div>
-                <div class="quote-logo">
-                    <i class="fas fa-quote-right"></i>
-                </div>
-            </div>
-
-            <p class="description">Unerdwear cookie liquorice. Cake donut cupcake lollipop soufflé candy. Chocolate
-                oat cake tootsie roll.</p>
-            <p class="description">Cake donut cupcake lollipop soufflé candy. Chocolate
-                oat cake tootsie roll.</p>
-
-            <p class="blue-name">-mr Linh</p>
-        </div>
-    </div>
-    <!-- /block6 -->
-    <div class="block7">
-        <div class="container">
-            <div class="row">
-                <div class="services-text col-md-12 mb-4">
-                    <p class="text-light mb-0 m-auto big-text">CONTACT</p>
-                    <div class="line-services bg-light mb-0"></div>
-                </div>
-
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group mb-4">
-                            <label for="exampleInputEmail1" class="text-light">FULL NAME</label>
-                            <input type="text" class="form-control background-transparent" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1" class="text-light">EMAIL</label>
-                            <input type="email" class="form-control background-transparent" id="exampleInputPassword1">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <p class="block7-text text-light pt-4 pl-5 text-justify mb-2">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Suscipit, perferendis consequatur! Blanditiis corporis odit
-                        architecto quisquam nulla, reprehenderit explicabo non officia.</p>
-                    <div class="info text-light pl-5 text-justify ">
-                        <p class="mb-0">Nguyen Hai Linh</p>
-                        <p class="mb-0">Bac Ninh</p>
-                        <p class="mb-0">123456789</p>
-                    </div>
-                </div>
-                <div class="col-md-12 mt-3">
-                    <div class="form-group ">
-                        <label for="exampleFormControlTextarea1" class="text-light">MESSAGE</label>
-                        <textarea class="form-control message text-light" id="exampleFormControlTextarea1"
-                            rows="5"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="btn btn-info text-light bg-info mt-2 btn-message">MESSAGE</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /block7 -->
-    <div class="block8">
-        <div class="container">
-            <div class="twitter d-flex justify-content-between align-items-center py-5">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">Home</li>
-                        <li class="breadcrumb-item">Library</li>
-                        <li class="breadcrumb-item">Library</li>
-                        <li class="breadcrumb-item">Library</li>
-                    </ol>
-                </nav>
-                <div class="quote-logo">
-                    <span>2019</span>
-                    <i class="far fa-copyright"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /block8 -->
-    <div id="stop" class="scrollTop">
-        <span><a href="">Top</a></span>
-    </div>
-</body>
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script> -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-
-<script>
-    // BY KAREN GRIGORYAN
-
-    $(document).ready(function () {
-        /******************************
-            BOTTOM SCROLL TOP BUTTON
-         ******************************/
-
-        // declare variable
-        var scrollTop = $(".scrollTop");
-
-        $(window).scroll(function () {
-            // declare variable
-            var topPos = $(this).scrollTop();
-
-            // if user scrolls down - show scroll to top button
-            if (topPos > 100) {
-                $(scrollTop).css("opacity", "1");
-
-            } else {
-                $(scrollTop).css("opacity", "0");
+                p.left {
+                float: left;
+                margin-left: 45px;
+                }
+                p.right {
+                float: right;
+                margin-right: 30px;
             }
-
-        }); // scroll END
-
-        //Click event to scroll to top
-        $(scrollTop).click(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-
-        }); // click() scroll top EMD
-
-        /*************************************
-          LEFT MENU SMOOTH SCROLL ANIMATION
-         *************************************/
-        // declare variable
-        var h1 = $("#h1").position();
-        var h2 = $("#h2").position();
-        var h3 = $("#h3").position();
-
-        $('.link1').click(function () {
-            $('html, body').animate({
-                scrollTop: h1.top
-            }, 500);
-            return false;
-
-        }); // left menu link2 click() scroll END
-
-        $('.link2').click(function () {
-            $('html, body').animate({
-                scrollTop: h2.top
-            }, 500);
-            return false;
-
-        }); // left menu link2 click() scroll END
-
-        $('.link3').click(function () {
-            $('html, body').animate({
-                scrollTop: h3.top
-            }, 500);
-            return false;
-
-        }); // left menu link3 click() scroll END
-
-    }); // ready() END
-</script>
-
+        </style>
+    </header>
+    <div id="background">
+    <p class="left">Hai Linh</p>
+    <p class="right">Thanh Huong</p>
+    </div>
+    <div id="chest">
+    <div class="heart left side top">
+    </div>
+    <div class="heart center">&hearts;
+    </div>
+    <div class="heart right side"></div>
+    </div>
 </html>
